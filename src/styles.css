@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #EEEEEE;
+}
+
+/** mio **/
+/* navbar */
+
+.main-navbar{
+    background-color: #FFE600;
+    text-align: center;
+}
+
+.elements-container{
+    margin: 8px auto;
+    text-align:center;
+    display:inline-flex;
+}
+
+.form-control{
+    border-radius: 0px !important;
+}
+
+.search-button{
+    height: 38px;
+    border: none;
+}
+
+.result-categories{
+    margin: 16px 0px !important;
+    color:#999999;
+}
+
+/* Grid cards */
+
+.selected-product-link{
+    color:black !Important;
+}
+
+.selected-product-link:hover{
+    text-decoration: none;
+}
+
+.product-mini-img{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    margin: 16px 0px;
+}
+
+.product-price{
+    margin: 32px 0px 0px 0px !Important;
+    padding-bottom: 32px;
+    font-size: 24px;
+}
+
+.product-description{
+    font-size:18px;
+}
+
+.product-location{
+    margin-top:48px;
+    font-size:12px;
+    color:#666666;
+}
+
+.category{
+    margin: 16px 0px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+.span-col-2{grid-column: span 1 / auto;}
+
+.span-col-3{grid-column: span 3 / auto;}
+
+/* pagina producto */
+
+.data-container{
+    width:100%;
+}
+.img-container{
+    max-width:680px;
+}
+
+.selected-condition-and-sold{
+    font-size:14px;
+    padding-top:32px;
+    margin-bottom:16px;
+}
+
+.selected-title{
+    font-size: 24px;
+    font-weight:bold;
+    padding-bottom:32px;
+}
+
+.selected-product-price{
+    font-size:46px;
+    padding-bottom:32px;
+}
+
+.card-body p{
+    margin: 0px !Important; 
+}
+
+.button-container{
+    text-align: center;
+    padding-right: 32px;
+}
+
+.btn{
+    width: 100%;
+}
+.description-title{
+    columns: #333333;;
+    font-size: 26px;
+    font-weight: 400;
+}
+.card-body{
+    padding-left:32px;
+}
+
+.description-text{
+    padding: 32px 0px;
+}

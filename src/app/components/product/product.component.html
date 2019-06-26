@@ -1,0 +1,24 @@
+<div class="container mb-5">
+    <p class="result-categories"> {{ textCategories }} </p>
+    <div class="card border-0">
+        <div class="row">
+            <div class="col-md-8" style="max-width:680px;">
+                <img src="{{ imgUrl }}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-4">
+                <div class="card-body pl-2">
+                    <div class="selected-condition-and-sold" ><p> {{ condition }} </p></div>
+                    <div class="selected-title"><p> {{ product.title }} </p></div>
+                    <div class="selected-product-price"><p> $ {{ product.price }} </p></div>
+                    <div class="button-container"><button type="button" class="btn btn-primary">Comprar</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0">
+      <div class="card-body card-body pt-0 pl-32 pr-0">
+            <p class="description-title ">Descripción del producto</p>
+            <p class="description-text" [innerHtml]="description" ></p>            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <p class="result-categories"> {{ textCategories }} </p>
+</div>
+
+<div class="container">
+    <div (click)="goToProduct(result)" *ngFor="let result of searchResult" class="card" >
+        <app-items [result]="result"></app-items>
+    </div>
+</div>

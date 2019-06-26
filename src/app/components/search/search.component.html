@@ -1,0 +1,9 @@
+<div class="card-columns">      
+    <div *ngFor="let result of searchResult" class="card">
+        <img src="{{ result.thumbnail }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> {{ result.price }} $ </h5>
+          <p class="card-text"> {{ result.title }} - {{ result.address.state_name }} </p>
+        </div>
+      </div>
+  </div>
