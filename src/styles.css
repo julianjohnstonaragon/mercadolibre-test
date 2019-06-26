@@ -3,9 +3,7 @@ body {
     background-color: #EEEEEE;
 }
 
-/** mio **/
 /* navbar */
-
 .main-navbar{
     background-color: #FFE600;
     text-align: center;
@@ -31,8 +29,7 @@ body {
     color:#999999;
 }
 
-/* Grid cards */
-
+/* item cards */
 .selected-product-link{
     color:black !Important;
 }
@@ -73,12 +70,16 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
 }
-.span-col-2{grid-column: span 1 / auto;}
+.span-col-2{
+    grid-column: span 1 / auto;
+}
 
-.span-col-3{grid-column: span 3 / auto;}
+.span-col-3{
+    grid-column: span 3 / auto;
+}
+
 
 /* pagina producto */
-
 .data-container{
     width:100%;
 }
