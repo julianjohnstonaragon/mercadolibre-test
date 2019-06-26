@@ -20,7 +20,9 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
     this.productService.searchResults.subscribe( (data: any) => {
-      this.searchResult = data;
+      if( data != null ) {
+        this.searchResult = data;
+      }
     });
   }
 

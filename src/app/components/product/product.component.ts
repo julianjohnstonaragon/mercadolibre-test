@@ -31,20 +31,24 @@ export class ProductComponent implements OnInit {
     // Recupero el producto específico
     this.productService.getSpecificProduct(productId)
       .subscribe( (data: any) => {
-        this.product    = data;
-        this.imgUrl     = data.pictures[0].secure_url;
-        this.condition  = (data.condition === 'new') ? 'Nuevo' : 'Usado';
+        if ( data != null ) {
+          this.product    = data;
+          this.imgUrl     = data.pictures[0].secure_url;
+          this.condition  = (data.condition === 'new') ? 'Nuevo' : 'Usado';
+        }
         this.condition += ' - ' + data.sold_quantity.toString() + ' ' + 'vendidos';
         // Recupero la categoría de ese producto
         this.productService.getCategories(this.product.category_id)
-        .subscribe( ( cat: any) => {
-          this.categories = cat;
-          this.textCategories = '';
-          this.categories.forEach(element => {
-          // tslint:disable-next-line:no-string-literal
-          this.textCategories += ' ' + element['name'] + ' >';
-          });
-          this.textCategories = this.textCategories.substring(0, this.textCategories.length - 1);
+        .subscribe( ( categories: any) => {
+          if (categories != null) {
+            this.categories = categories;
+            this.textCategories = '';
+            this.categories.forEach(element => {
+            // tslint:disable-next-line:no-string-literal
+            this.textCategories += ' ' + element['name'] + ' >';
+            });
+            this.textCategories = this.textCategories.substring(0, this.textCategories.length - 1);
+          }
         });
       });
     // Recupero la descripción del producto y la formateo para que aparezca tal cual en la página

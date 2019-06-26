@@ -19,7 +19,9 @@ export class SearchComponent implements OnInit {
     console.log(termino);
     this.productService.getProducts(termino)
       .subscribe( (data: any) => {
-        this.searchResult = data;
+        if (data != null ) {
+          this.searchResult = data;
+        }
       });
   }
 }

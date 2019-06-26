@@ -22,16 +22,20 @@ export class NavbarComponent implements OnInit {
   searchData(termino: string) {
     this.productService.getProducts(termino)
     .subscribe( (data: any) => {
-      this.searchResult = data;
-      this.productService.searchResults.next(data);
+      if (data != null) {
+        this.searchResult = data;
+        this.productService.searchResults.next(data);
+      }
       this.productService.getCategories(this.searchResult[0].category_id)
       .subscribe( ( categories: any) => {
-        this.categories = categories;
-        this.textCategories = '';
-        this.categories.forEach(element => {
-          this.textCategories += ' ' + element.name + ' >';
-        });
-        this.textCategories = this.textCategories.substring(0, this.textCategories.length - 1);
+        if (categories != null) {
+          this.categories = categories;
+          this.textCategories = '';
+          this.categories.forEach(element => {
+            this.textCategories += ' ' + element.name + ' >';
+          });
+          this.textCategories = this.textCategories.substring(0, this.textCategories.length - 1);
+        }
       });
     });
 
